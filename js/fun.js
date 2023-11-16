@@ -55,3 +55,60 @@ function updateTimer() {
 updateTimer();
 
 setInterval(updateTimer, 1000);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'flex';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Inicia el slider
+    showSlide(currentSlide);
+
+    // Cambia de slide cada 3 segundos (ajusta según sea necesario)
+    setInterval(nextSlide, 3000);
+});
+
+
+const menuPhone = document.querySelector('.phone_menu')
+const imgsPhoneMenu = document.querySelector('.logo_phone img')
+const imgsPhoneMenu2 = document.querySelector('.menu_p img')
+
+document.addEventListener('scroll', () => {
+    if(window.scrollY > 300){
+        menuPhone.style.backgroundColor = 'rgba(243, 249, 251, 0.7)'
+        imgsPhoneMenu.style.width = '15%'
+    } else{
+        menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
+        imgsPhoneMenu.style.width = '25%'
+    }
+    
+})
+menuPhone.addEventListener('mouseover', () => {
+    if(window.scrollY > 300){
+        menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
+        imgsPhoneMenu.style.width = '25%'
+    } 
+    
+})
+
+menuPhone.addEventListener('mouseout', () => {
+    if(window.scrollY > 300){
+        menuPhone.style.backgroundColor = 'rgba(243, 249, 251, 0.7)'
+        imgsPhoneMenu.style.width = '15%'
+    } 
+})
