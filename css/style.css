@@ -69,8 +69,8 @@ main{
 
 .text_home{
     position: absolute;
-    top: 10%;
-    left: 20%;
+    top: 5%;
+    left: 5%;
     color: #f3f9fb;
     
 }
@@ -273,7 +273,7 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
 .info{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: end;
     justify-content: space-evenly;
 }
 
@@ -334,7 +334,7 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
         z-index: 1;
     }
     .phone_menu img{
-        width: 25%;
+        width: 18%;
     }
     .text_home{
         bottom: 0%;
@@ -377,6 +377,6 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
         font-size: 1.8rem;
     }
     .slide img {
-        height: 500px;
+        height: 600px;
     }
 }

@@ -89,25 +89,25 @@ const imgsPhoneMenu = document.querySelector('.logo_phone img')
 const imgsPhoneMenu2 = document.querySelector('.menu_p img')
 
 document.addEventListener('scroll', () => {
-    if(window.scrollY > 300){
+    if(window.scrollY > 480){
         menuPhone.style.backgroundColor = 'rgba(243, 249, 251, 0.7)'
         imgsPhoneMenu.style.width = '15%'
     } else{
         menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
-        imgsPhoneMenu.style.width = '25%'
+        imgsPhoneMenu.style.width = '18%'
     }
     
 })
 menuPhone.addEventListener('mouseover', () => {
-    if(window.scrollY > 300){
+    if(window.scrollY > 480){
         menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
-        imgsPhoneMenu.style.width = '25%'
+        imgsPhoneMenu.style.width = '18%'
     } 
     
 })
 
 menuPhone.addEventListener('mouseout', () => {
-    if(window.scrollY > 300){
+    if(window.scrollY > 480){
         menuPhone.style.backgroundColor = 'rgba(243, 249, 251, 0.7)'
         imgsPhoneMenu.style.width = '15%'
     } 
