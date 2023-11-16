@@ -305,6 +305,24 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
     display: none;
 }
 
+.nav_phone_menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #f3f9fb;
+    width: 100%;
+    color: #607660;
+}
+
+.show {
+    display: flex;
+}
+
+
 
 
 /*keyframes*/
@@ -334,10 +352,10 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
         z-index: 1;
     }
     .phone_menu img{
-        width: 18%;
+        width: 25%;
     }
     .text_home{
-        bottom: 0%;
+        bottom: 2%;
         left: 5%;
         display: flex;
         flex-direction: column;
@@ -353,6 +371,7 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
     }
     .menu_p img{
         width: 60%;
+        cursor: pointer;
     }
     .litte_story{
         display: grid;
@@ -377,6 +396,18 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
         font-size: 1.8rem;
     }
     .slide img {
-        height: 600px;
+        height: 670px;
+    }
+
+
+
+    .nav_phone_menu li {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .nav_phone_menu a {
+        text-decoration: none;
+        color: #607660;
     }
 }
