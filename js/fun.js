@@ -119,6 +119,8 @@ const optionsNavMenu = document.querySelector('.nav_phone_menu li')
 
 menuIcon.addEventListener('click', function () {
     navMenu.classList.toggle('show');
+    menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
+    imgsPhoneMenu.style.width = '25%'
 });
 
 optionsNavMenu.addEventListener('click', function () {
