@@ -12,7 +12,7 @@ body{
 
 /*Nav menu*/
 .desktop_menu{
-    background-color: #f5f5f5;
+    background-color: rgba(245, 245, 245);
 }
 
 ul{
@@ -46,7 +46,7 @@ ul img{
 }
 
 /*first photo*/
-main{
+.photos_main{
     width: 100%;
     position: relative;
 }
@@ -166,7 +166,7 @@ main{
     height: 80%;
     object-fit: cover;
 }
-.frame_more_about{
+.frame_more_about a{
     position: absolute;
     bottom: 5%;
     right: 3%;
@@ -183,9 +183,6 @@ main{
     transform: scale(1.1);
     cursor: pointer;
 }
-/*font-family: 'Dancing Script', cursive;
-font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-serif;*/
-
 
 
 /*ticker*/
@@ -322,6 +319,99 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
     display: flex;
 }
 
+/*pagina nuestra historia*/
+.photo_our_story img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.5);
+    position: relative;
+
+}
+.section_title{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    color: #f3f9fb;
+}
+.section_title h1{
+    font-size: 4.2rem;
+    font-family: 'rubik', 'sans-serif';
+}
+
+.characters h2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    font-size: 4.2rem;
+    font-family: 'Dancing Script', cursive;
+    color: #607660;
+}
+.main_characters{
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.profile{
+    display: grid;
+}
+
+.name_vertical{
+    grid-area: 1 / 1 / 10 / 4;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    line-height: 1;
+    
+}
+.name_vertical h2{
+    font-family: 'rubik', sans-serif;
+    font-size: 1.4rem;
+    color: #607660;
+    width: 100%;
+}
+
+.photo_profile{
+    grid-area: 1 / 4 / 6 / 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo_profile img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.description{
+    grid-area: 6 / 4 / 10 / 10;
+    padding: 30px 20px;
+}
+.description h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.6rem;
+    color: #c0a080;
+    text-align: center;
+}
+
+.description h4{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.8rem;
+    color: #607660;
+    text-align: justify;
+    max-width: inherit;
+    margin-top: 40px;
+}
+
+
+
 
 
 
@@ -337,7 +427,7 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
     to {color: #f3f9fb;}
 }
 
-
+/*Media querys*/
 @media screen and (max-width: 670px) {
     
     .desktop_menu{
@@ -409,5 +499,25 @@ font-family: 'Montserrat Alternates', sans-serif;font-family: 'Rubik', sans-seri
     .nav_phone_menu a {
         text-decoration: none;
         color: #607660;
+    }
+
+
+
+    /*NUESTRA historia media querys*/
+    .photo_our_story img{
+        height: 550px;
+        object-position: top;
+    }
+    .section_title{
+        top: 25%;
+        left: 13%;
+        font-size: 3rem;
+    }
+    .section_title h1{
+        font-size: 3rem;
+    }
+    .main_characters{
+        grid-template-columns: 1fr;
+        padding: 20px 30px;
     }
 }

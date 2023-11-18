@@ -1,28 +1,12 @@
-const contenedor = document.querySelector(".ticker-title");
-const items = document.querySelectorAll(".ticker-title span");
-let ancho = 0;
-items.forEach( item => ancho += (item.clientWidth + 50));
-contenedor.style.width = ancho + "px";
-
-let left = 0;
-setInterval(()=>{
-    if((left * -1) < (contenedor.children[0].clientWidth + 50)){
-        left--;
-    }else{
-        contenedor.appendChild(contenedor.children[0]);
-        left = 0;
-    }
-    contenedor.style.left = left + "px";
-   
-},1000/60);
 
 
-const targetDate = new Date("October 19, 2024 14:00:00").getTime();
+
+const weddingDate = new Date("October 19, 2024 21:00:00").getTime();
 
 
 function updateTimer() {
     const currentDate = new Date().getTime();
-    const timeDifference = targetDate - currentDate;
+    const timeDifference = weddingDate - currentDate;
 
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -111,6 +95,25 @@ menuPhone.addEventListener('mouseout', () => {
         imgsPhoneMenu.style.width = '18%'
     } 
 })
+
+
+const contenedor = document.querySelector(".ticker-title");
+const items = document.querySelectorAll(".ticker-title span");
+let ancho = 0;
+items.forEach( item => ancho += (item.clientWidth + 50));
+contenedor.style.width = ancho + "px";
+
+let left = 0;
+setInterval(()=>{
+    if((left * -1) < (contenedor.children[0].clientWidth + 50)){
+        left--;
+    }else{
+        contenedor.appendChild(contenedor.children[0]);
+        left = 0;
+    }
+    contenedor.style.left = left + "px";
+   
+},1000/60);
 
 
 const menuIcon = document.querySelector('.menu_icon');
