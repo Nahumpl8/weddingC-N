@@ -30,14 +30,32 @@ menuPhone.addEventListener('mouseout', () => {
 
 const menuIcon = document.querySelector('.menu_icon');
 const navMenu = document.querySelector('.nav_phone_menu');
-const optionsNavMenu = document.querySelector('.nav_phone_menu li')
+const optionsNavMenu = document.querySelectorAll('.nav_phone_menu li')
+const containerX = document.querySelector('.menu_p')
 
 menuIcon.addEventListener('click', function () {
     navMenu.classList.toggle('show');
     menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
     imgsPhoneMenu.style.width = '25%'
+
+    if(menuIcon.src.includes('List.png')){
+        menuIcon.src = '../images/X.png'
+    } else{
+        menuIcon.src = '../images/List.png'
+    }
 });
 
-optionsNavMenu.addEventListener('click', function () {
-    navMenu.classList.toggle('show');
+optionsNavMenu.forEach((op) => {
+    op.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    })
+})
+
+const logoHome = document.querySelectorAll('.principal_logo')
+console.log(logoHome)
+
+logoHome.forEach((home) => {
+    home.addEventListener('click', () => {
+        window.location.href = '../index.html';
+    })
 })

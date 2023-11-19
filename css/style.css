@@ -44,8 +44,14 @@ ul a:hover{
 ul img{
     width: 10%;
 }
+.principal_logo{
+    cursor: pointer;
+}
+.principal_logo:hover{
+    transform: scale(1.2);
+}
 
-/*first photo*/
+/*slider principal photos*/
 .photos_main{
     width: 100%;
     position: relative;
@@ -59,6 +65,7 @@ ul img{
 .slide {
     width: 100%;
     display: none;
+    
 }
 
 .slide img {
@@ -81,7 +88,7 @@ ul img{
     animation: entradaTitulo 3s;
 }
 .text_home h4{
-    animation: entradaTitulo 3s .5s;
+    animation: entradaTitulo 4s;
     font-size: 2.4rem;
 }
 
@@ -252,7 +259,7 @@ ul img{
 .paragraphs_info{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    gap: 40px;
     padding: 40px;
     text-align: justify;
     
@@ -271,11 +278,11 @@ ul img{
     display: flex;
     flex-direction: column;
     align-items: end;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .info h2{
-    color: rgb(96, 118, 96);
+    color: #c0a080;
     font-family: 'Rubik', sans-serif;
     font-size: 2.4rem;
 }
@@ -539,6 +546,7 @@ ul img{
     border-radius: 100%;
     background-color: chocolate;
     margin: 20px;
+    border: 2px solid #c0a080;
 }
 .information_dress_code:not(:first-child){
     margin-top: 100px;
@@ -585,12 +593,9 @@ ul img{
     from {color: transparent;}
     to {color: #f3f9fb;}
 }
-@keyframes spinFrame {
-    from {
-        transform: rotate(180);
-    }
-    to {color: #f3f9fb;}
-}
+
+
+
 
 /*Media querys*/
 @media screen and (max-width: 700px) {
@@ -605,6 +610,9 @@ ul img{
         background-color: rgba(243, 249, 251);
         position: fixed;
         z-index: 1;
+    }
+    .menu_p{
+        width: 30%;
     }
     .phone_menu img{
         width: 25%;
@@ -655,10 +663,9 @@ ul img{
     }
 
     .nav_phone_menu li {
-        padding: 10px;
+        padding: 20px 0px;
         text-align: center;
     }
-    
     .nav_phone_menu a {
         text-decoration: none;
         color: #607660;

@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentSlide);
 
     // Cambia de slide cada 3 segundos (ajusta según sea necesario)
-    setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 4000);
 });
 
 
@@ -97,11 +97,18 @@ menuPhone.addEventListener('mouseout', () => {
 const menuIcon = document.querySelector('.menu_icon');
 const navMenu = document.querySelector('.nav_phone_menu');
 const optionsNavMenu = document.querySelectorAll('.nav_phone_menu li')
+const containerX = document.querySelector('.menu_p')
 
 menuIcon.addEventListener('click', function () {
     navMenu.classList.toggle('show');
     menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
     imgsPhoneMenu.style.width = '25%'
+
+    if(menuIcon.src.includes('List.png')){
+        menuIcon.src = './images/X.png'
+    } else{
+        menuIcon.src = './images/List.png'
+    }
 });
 
 optionsNavMenu.forEach((op) => {
@@ -129,3 +136,13 @@ setInterval(()=>{
     contenedor.style.left = left + "px";
    
 },1000/60);
+
+
+const logoHome = document.querySelectorAll('.principal_logo')
+console.log(logoHome)
+
+logoHome.forEach((home) => {
+    home.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    })
+})
