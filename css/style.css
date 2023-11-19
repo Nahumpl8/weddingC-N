@@ -501,22 +501,21 @@ ul img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin-top: 50px;
 }
-.woman_options h1{
-    font-size: 4.2rem;
-    color: #c0a080;
-    font-family: 'Dancing Script', cursive;
-}
+
 .woman_options h2{
     font-size: 4.2rem;
     color: #607660;
     font-family: 'rubik', 'sans-serif';
+    padding: 20px 40px;
 }
 .information_dress_code{
     display: grid;
     grid-template-columns: 1fr 4fr;
     justify-content: center;
-    padding: 40px;
+    padding: 0 40px;
     gap: 40px;
 }
 .information_dress_code .title{
@@ -524,9 +523,9 @@ ul img{
     align-items: center;
 }
 .information_dress_code .title h2{
-    text-align: start;
-    color: #607660;
+    color: #c0a080;
     font-size: 2.4rem;
+    font-weight: 600;
 }
 .colors{
     display: flex;
@@ -535,11 +534,46 @@ ul img{
     flex-wrap: wrap;
 }
 .color{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     background-color: chocolate;
     margin: 20px;
+}
+.information_dress_code:not(:first-child){
+    margin-top: 100px;
+}
+
+.reglas{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.regla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+}
+.regla h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.regla img{
+    width: 60px;
+    height: 60px;
+}
+.dress_examples h2{
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+
+.title h2{
+    font-size: 1.8rem;
+    font-weight: 300;
 }
 
 
@@ -668,9 +702,17 @@ ul img{
     .she_said_yes .section_title2 {
         font-size: 2.4rem;
     }
+
+
+
     /***DRES CODE PHONE*****/
+    
     .information_dress_code{
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .woman_options h2{
+        font-size: 3rem;
     }
     .color{
         width: 50px;
@@ -678,6 +720,22 @@ ul img{
         border-radius: 100%;
         margin: 20px;
     }
+    .information_dress_code .title h2{
+        font-size: 1.8rem;
+        
+    }
+    .regla h2{
+        font-size: 1.8rem;
+        
+    }
+    .dress_examples h2{
+        font-size: 1.8rem;
+    }
+    .man_options h2:first-child{
+        font-size: 3rem;
+        color: #c0a080;
+    }
+
 }
 
 
@@ -691,7 +749,5 @@ ul img{
     .she_said_yes .section_title2 {
         font-size: 3rem;
     }
-
-
 
 }
