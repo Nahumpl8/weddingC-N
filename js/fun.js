@@ -96,7 +96,7 @@ menuPhone.addEventListener('mouseout', () => {
 
 const menuIcon = document.querySelector('.menu_icon');
 const navMenu = document.querySelector('.nav_phone_menu');
-const optionsNavMenu = document.querySelector('.nav_phone_menu li')
+const optionsNavMenu = document.querySelectorAll('.nav_phone_menu li')
 
 menuIcon.addEventListener('click', function () {
     navMenu.classList.toggle('show');
@@ -104,8 +104,10 @@ menuIcon.addEventListener('click', function () {
     imgsPhoneMenu.style.width = '25%'
 });
 
-optionsNavMenu.addEventListener('click', function () {
-    navMenu.classList.toggle('show');
+optionsNavMenu.forEach((op) => {
+    op.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    })
 })
 
 

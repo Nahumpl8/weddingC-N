@@ -570,7 +570,6 @@ ul img{
     font-weight: 300;
 }
 
-
 .title h2{
     font-size: 1.8rem;
     font-weight: 300;
@@ -734,6 +733,9 @@ ul img{
     .man_options h2:first-child{
         font-size: 3rem;
         color: #c0a080;
+    }
+    .information_dress_code:not(:first-child){
+        margin-top: 50px;
     }
 
 }
