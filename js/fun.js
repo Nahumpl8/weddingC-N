@@ -1,6 +1,3 @@
-
-
-
 const weddingDate = new Date("October 19, 2024 21:00:00").getTime();
 
 
@@ -97,6 +94,22 @@ menuPhone.addEventListener('mouseout', () => {
 })
 
 
+const menuIcon = document.querySelector('.menu_icon');
+const navMenu = document.querySelector('.nav_phone_menu');
+const optionsNavMenu = document.querySelector('.nav_phone_menu li')
+
+menuIcon.addEventListener('click', function () {
+    navMenu.classList.toggle('show');
+    menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
+    imgsPhoneMenu.style.width = '25%'
+});
+
+optionsNavMenu.addEventListener('click', function () {
+    navMenu.classList.toggle('show');
+})
+
+
+
 const contenedor = document.querySelector(".ticker-title");
 const items = document.querySelectorAll(".ticker-title span");
 let ancho = 0;
@@ -114,18 +127,3 @@ setInterval(()=>{
     contenedor.style.left = left + "px";
    
 },1000/60);
-
-
-const menuIcon = document.querySelector('.menu_icon');
-const navMenu = document.querySelector('.nav_phone_menu');
-const optionsNavMenu = document.querySelector('.nav_phone_menu li')
-
-menuIcon.addEventListener('click', function () {
-    navMenu.classList.toggle('show');
-    menuPhone.style.backgroundColor = 'rgba(243, 249, 251)'
-    imgsPhoneMenu.style.width = '25%'
-});
-
-optionsNavMenu.addEventListener('click', function () {
-    navMenu.classList.toggle('show');
-})

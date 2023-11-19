@@ -319,6 +319,10 @@ ul img{
     display: flex;
 }
 
+
+
+
+
 /*pagina nuestra historia*/
 .photo_our_story img{
     width: 100%;
@@ -333,6 +337,7 @@ ul img{
     top: 25%;
     left: 10%;
     color: #f3f9fb;
+    animation: entradaTitulo 3s;
 }
 .section_title h1{
     font-size: 4.2rem;
@@ -401,14 +406,79 @@ ul img{
     text-align: center;
 }
 
-.description h4{
-    font-family: 'Montserrat Alternates', sans-serif;
+
+.time_line{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+.time_line div{
+    height: 480px;
+}
+.time_line .years{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+    border-right: 2px solid #c0a080;
+    font-size: 2.4rem;
+}
+
+.time_line .years .year h2{
+    margin-right: 15px;
+    color: #607660;
+    font-family: 'rubik', sans-serif;
+
+}
+
+.time_line .description_story{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
     font-size: 1.8rem;
     color: #607660;
-    text-align: justify;
-    max-width: inherit;
-    margin-top: 40px;
+    font-family: 'Rubik', sans-serif;
+    padding-right: 280px;
+    
 }
+.year_description h2{
+    color: #c0a080;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 15px;
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.time_line .description_story h3{
+    margin-left: 15px;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.she_said_yes{
+    margin-top: 150px;
+    position: relative;
+}
+.photo_our_story2 img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.she_said_yes .section_title2 {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Dancing Script', cursive;;
+    color: #f3f9fb;
+    font-size: 4.2rem;
+    text-align: center;
+    z-index: 1; 
+}
+
 
 
 
@@ -428,7 +498,7 @@ ul img{
 }
 
 /*Media querys*/
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 700px) {
     
     .desktop_menu{
         display: none;
@@ -519,5 +589,25 @@ ul img{
     .main_characters{
         grid-template-columns: 1fr;
         padding: 20px 30px;
+    }
+    .time_line div{
+        height: 680px;
+    }
+    .time_line .description_story{
+        padding-right: 20px;
+        
+    }
+    .she_said_yes .section_title2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .time_line .description_story{
+        padding-right: 20px;
+        
+    }
+    .she_said_yes .section_title2 {
+        font-size: 3rem;
     }
 }
