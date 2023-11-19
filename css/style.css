@@ -319,6 +319,20 @@ ul img{
     display: flex;
 }
 
+.contact_wedding{
+    padding: 10% 20%;
+    text-align: center;
+    font-family: 'rubik', 'sans-serif';
+}
+.contact_wedding h2{
+    font-size: 3rem;
+    color: #607660;
+}
+.contact_wedding h3{
+    font-size: 2.4rem;
+    color: #c0a080;
+}
+
 
 
 
@@ -480,6 +494,54 @@ ul img{
 }
 
 
+/****** DRES CODE ******/
+
+.woman_options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.woman_options h1{
+    font-size: 4.2rem;
+    color: #c0a080;
+    font-family: 'Dancing Script', cursive;
+}
+.woman_options h2{
+    font-size: 4.2rem;
+    color: #607660;
+    font-family: 'rubik', 'sans-serif';
+}
+.information_dress_code{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+}
+.information_dress_code .title{
+    display: flex;
+    align-items: center;
+}
+.information_dress_code .title h2{
+    text-align: start;
+    color: #607660;
+    font-size: 2.4rem;
+}
+.colors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.color{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: chocolate;
+    margin: 20px;
+}
+
 
 
 
@@ -559,8 +621,6 @@ ul img{
         height: 670px;
     }
 
-
-
     .nav_phone_menu li {
         padding: 10px;
         text-align: center;
@@ -571,6 +631,14 @@ ul img{
         color: #607660;
     }
 
+    .contact_wedding h2{
+        font-size: 2.4rem;
+        color: #607660;
+    }
+    .contact_wedding h3{
+        font-size: 1.8rem;
+        color: #c0a080;
+    }
 
 
     /*NUESTRA historia media querys*/
@@ -600,8 +668,21 @@ ul img{
     .she_said_yes .section_title2 {
         font-size: 2.4rem;
     }
+    /***DRES CODE PHONE*****/
+    .information_dress_code{
+        grid-template-columns: 1fr;
+    }
+    .color{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        margin: 20px;
+    }
 }
 
+
+
+/**TABLET QUERYS***/
 @media screen and (max-width: 900px) {
     .time_line .description_story{
         padding-right: 20px;
@@ -610,4 +691,7 @@ ul img{
     .she_said_yes .section_title2 {
         font-size: 3rem;
     }
+
+
+
 }
